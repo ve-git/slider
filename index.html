@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.polyfill.io/v1/polyfill.js?features=Element.prototype.closest"></script>
+  <script src="slider.js"></script>
+  
+  <style>
+   .slider{
+    left: 10px;
+    top: 10px;
+    height: 50%; /* Высота блока */
+    width: 50%; /* Ширина блока */
+    overflow: auto; /* Добавляем полосы прокрутки */
+    padding: 7px; /* Поля вокруг текста */
+    border: 1px solid #333; /* Параметры рамки */
+    position: absolute;
+   }
+  </style>  
+  
+</head>
+
+<body>
+
+<!--  <span>something before slider</span> -->
+  <div id="my-slider" class="slider" data-current-item = 3>
+    <div> 123 </div>
+    <img src="images/bird-2253074__340.jpg"   alt="рисунок"/>  
+    <img src="images/cat-2258190__340.jpg"    alt="рисунок"/>  
+    <img src="images/fuchs-2257543__340.jpg"  alt="рисунок"/>  
+    <img src="images/nature-2249084__340.jpg" alt="рисунок"/>  
+    <img src="images/puppy-2255248__340.jpg"  alt="рисунок"/>  
+
+	</div>
+<!--    <span>something after slider</span>  -->
+
+  
+  <script>
+    var slider = new Slider({
+      elem: document.getElementById('my-slider')
+    });
+  </script>
+
+</body>
+
+</html>
