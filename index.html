@@ -7,7 +7,7 @@
   <script src="slider.js"></script>
   
   <style>
-   .slider{
+   .slider2{
     left: 10px;
     top: 10px;
     height: 50%; /* Высота блока */
@@ -17,15 +17,21 @@
     border: 1px solid #333; /* Параметры рамки */
     position: absolute;
    }
-  </style>  
+  </style> 
   
 </head>
 
 <body>
 
-<!--  <span>something before slider</span> -->
-  <div id="my-slider" class="slider" data-current-item = 3>
-    <div> 123 </div>
+<span>something before slider</span>
+  <div 
+    id="my-slider" 
+    class="slider" 
+    data-current-item = 1
+    data-width = "340"
+    data-height = "340"
+  >
+    <div> some text </div>
     <img src="images/bird-2253074__340.jpg"   alt="рисунок"/>  
     <img src="images/cat-2258190__340.jpg"    alt="рисунок"/>  
     <img src="images/fuchs-2257543__340.jpg"  alt="рисунок"/>  
@@ -33,7 +39,7 @@
     <img src="images/puppy-2255248__340.jpg"  alt="рисунок"/>  
 
 	</div>
-<!--    <span>something after slider</span>  -->
+<span>something after slider</span>
 
   
   <script>
