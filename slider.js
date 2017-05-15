@@ -166,14 +166,14 @@ function Slider(options) {
       timerId = setTimeout(run, 2000);
     }, 0);
 
-	  playing = true;  
+    playing = true;  
   }
 
   function stop(){
     spanStop.style.display = 'none';
     spanPlay.style.display = '';
-	  clearTimeout(timerId);
-	  playing = false;
+    clearTimeout(timerId);
+    playing = false;
   }
   
   elem.onclick = function(event) {
