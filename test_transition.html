@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+
+  <style>
+    .c1{
+      top: 0px;
+      width: 33%;
+      height: 10%;
+      background: #a9db7a;
+      position: relative;
+    }
+
+    .c1_left{
+      left: 0%;
+    }
+
+    .c1_center{
+      left: 33%;
+    }
+
+    .c1_right{
+      left: 66%;
+    }
+
+    .c1_transition{
+      transition:all 4s;
+    }
+
+    .c1_hide{
+      display:none;
+    }
+
+
+
+    .btn{
+      color:black;
+      background-color:#CCCCCC;
+      top:55px;
+      width:30px;
+      text-align:center;
+      position:absolute;
+    }
+
+    #b_left{
+      left:10px;
+    }
+
+    #b_right{
+      left:50px;
+    }
+
+    #log{
+      top:85px;
+      position:absolute;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="c1" id="main" >123  </div>
+  <p>
+   <span class="btn" id="b_left" onclick=leftclick >  &lt;&lt;  </span>
+   &nbsp;
+   <!--<span class="btn" id="b_right"  onclick="rightclick" >&gt;&gt;  </span> -->
+   
+  <textarea id="log" style="width:538px;height:200px">Отладка 
+  </textarea>
+
+  
+  <script>
+    let elem = document.getElementById('main');
+    elem.classList.add('c1_center');
+
+
+    document.onclick = function(event) {
+      if (event.target.closest('#b_left'))   { leftclick(); };
+      if (event.target.closest('#b_right'))   { rightclick(); };
+    };
+
+
+    function leftclick(){
+      if (elem.classList.contains('c1_left')) {
+        elem.classList.remove('c1_transition');
+        elem.classList.remove('c1_left');
+        elem.classList.add('c1_right');
+
+alert('1');
+
+        elem.classList.add('c1_transition');
+        elem.classList.remove('c1_right');
+        elem.classList.add('c1_center');
+
+        return;
+      };
+      
+      if (elem.classList.contains('c1_center')) {
+        elem.classList.add('c1_transition');
+        elem.classList.remove('c1_center');
+        elem.classList.add('c1_left');
+        // !!!! Если расскоментировать след. строчку - анимация пропадет.
+        //elem.classList.remove('c1_transition');
+        return;
+      };  
+
+      if (elem.classList.contains('c1_right')) {
+        elem.classList.add('c1_transition');
+        elem.classList.remove('c1_right');
+        elem.classList.add('c1_center');
+        return;
+      };  
+
+    }
+
+
+    function rightclick(){
+      alert('rightclick');
+    }
+
+
+  </script>
+
+</body>
+
+</html>

@@ -2,31 +2,44 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
+  <!--
   <script src="https://cdn.polyfill.io/v1/polyfill.js?features=Element.prototype.closest"></script>
+  -->
   <script src="slider.js"></script>
-  
-
-  
 </head>
 
 <body>
 
   <span>something before slider</span>
-    <div> some text some text some text</div>
-    <img src="images/bird-2253074__340.jpg"   alt="рисунок 1"/>  
-    <img src="images/cat-2258190__340.jpg"    alt="рисунок 2"/>  
+
+  <div 
+    id="my-slider" 
+    class="slider" 
+  >
+    <img src="images/bird-2253074__340.jpg"   alt="рисунок 0"/>  
+    <img src="images/cat-2258190__340.jpg"    alt="рисунок 1"/>  
+    <div> some text 2 </div>
     <img src="images/fuchs-2257543__340.jpg"  alt="рисунок 3"/>  
     <img src="images/nature-2249084__340.jpg" alt="рисунок 4"/>  
     <img src="images/puppy-2255248__340.jpg"  alt="рисунок 5"/>  
   </div>
+
   <span>something after slider</span>
+  <p>
+<!--  <textarea id="log" style="width:538px;height:200px">Отладка   </textarea>  -->
+
 
   
   <script>
     var slider = new Slider({
-      elem: document.getElementById('my-slider')
+      placeholder: document.getElementById('my-slider'),
+      currentItem: 0,
+      width: 538,
+      height: 340,
+      duration: 2000,
+      transition:'left 2s',
+      autoplay:1
     });
   </script>
 
